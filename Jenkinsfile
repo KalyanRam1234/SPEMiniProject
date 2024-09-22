@@ -1,13 +1,14 @@
 pipeline{
     environment{
         DOCKERHUB_CRED = credentials("DockerHubCred")
+        GITHUB_CRED = credentials("1dc269f2-1980-4e29-948f-0ecd23674cb1")
         GITHUB_REPO_URL = 'https://github.com/KalyanRam1234/SPEMiniProject.git'
     }
     agent any
     stages{
         stage("Stage 1 : Git Clone"){
             steps{
-                git branch : 'main', url : "${GITHUB_REPO_URL}"
+                git branch : 'main', url : "${GITHUB_REPO_URL}", credentialsId : "${GITHUB_CRED}"
             }
         }
         
