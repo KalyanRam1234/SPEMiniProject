@@ -13,7 +13,7 @@ pipeline{
         
         stage("Stage 2 : Maven Build"){
             steps{
-                sh 'mvn clean install'
+                sh 'mvn -f ./spe/pom.xml clean install'
             }
         }
         
