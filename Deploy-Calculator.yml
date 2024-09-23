@@ -12,4 +12,4 @@
       shell: docker pull kalyanramm237/calculator:latest
 
     - name: Run the container
-      shell: docker run -it -d --name Calculator kalyanramm237/calculator
+      shell: docker create -it --name Calculator kalyanramm237/calculator
