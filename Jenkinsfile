@@ -1,7 +1,7 @@
 pipeline{
     environment{
         DOCKERHUB_CRED = credentials("DockerHubCred")
-        GITHUB_CRED = credentials("1dc269f2-1980-4e29-948f-0ecd23674cb1")
+        GITHUB_CRED = credentials("Github")
         GITHUB_REPO_URL = 'https://github.com/KalyanRam1234/SPEMiniProject.git'
     }
     agent any
